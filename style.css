@@ -66,3 +66,21 @@ section#div h2{
     color: white; /* Cor ao passar o mouse */
     text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
 }
+
+    #home {
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    @media (max-width: 768px) {
+        #home {
+            height: 50vh; /* Ajuste a altura para telas menores */
+        }
+        h1 {
+            font-size: 2.5em; /* Reduzir o tamanho da fonte em dispositivos menores */
+        }
+        p {
+            font-size: 0.9em; /* Ajustar o tamanho do texto */
+        }
+    }
