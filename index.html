@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caminho do Discípulo</title>
+    <link rel="shortcut icon" href="imagem/img.CCD.jpg" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        // Configuração do TailwindCSS com a paleta de cores personalizada
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        base: '#62859c',
+                        conversao: '#f00e16',
+                        comunhao: '#fcbb17',
+                        formacao: '#206aab',
+                        missao: '#056925',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <script src="script.js" defer></script>
+</head>
+<body class="font-sans antialiased text-gray-800 dark:text-white bg-green-100 dark:bg-gray-900">
+    <!-- Header e Navegação -->
+    <header class="fixed w-full bg-white dark:bg-gray-900 shadow-md z-50">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <h1 class="text-2xl font-bold text-base">
+                        <a href="#home" class="flex items-center">
+                            <i class="fas fa-cross mr-2"></i>
+                            <span>Caminho do Discípulo</span>
+                        </a>
+                    </h1>
+                </div>
+                
+                <!-- Menu para Desktop -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#sobre" class="font-medium hover:text-base transition-colors">Sobre</a>
+                    <a href="#pilares" class="font-medium hover:text-base transition-colors">Pilares</a>
+                    <a href="#inscricao" class="font-medium hover:text-base transition-colors">Inscrição</a>
+                    <a href="#contato" class="font-medium hover:text-base transition-colors">Contato</a>
+                </nav>
+                
+                <!-- Botão do Menu Mobile -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-600 dark:text-white focus:outline-none">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Menu Mobile -->
+            <div id="mobile-menu" class="md:hidden hidden mt-4 pb-2">
+                <a href="#sobre" class="block py-2 hover:text-base">Sobre</a>
+                <a href="#pilares" class="block py-2 hover:text-base">Pilares</a>
+                <a href="#inscricao" class="block py-2 hover:text-base">Inscrição</a>
+                <a href="#contato" class="block py-2 hover:text-base">Contato</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section - Imagem CCD Inicio Pagina -->
+    <section id="home" class="h-screen flex items-center justify-center bg-cover bg-center text-white relative" style="background-image: url('imagem/imagem\ CCD\ 3.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; height:60vh;">
+        <div class="absolute inset-0 bg-overlay"></div>
+        <div class="container mx-auto px-4 z-10 text-center">
+            <h1 style="font-size: 3.5em;"class="text-4xl md:text-6xl font-bold mb-4 animate-fade-in">Caminho do Discípulo</h1>
+            <p class="text-xl md:text-2xl mb-8 animate-fade-in delay-100">Ser Discípulo para Fazer Discípulos, na evangelização um a um na vivência em células.</p>
+            <a href="#inscricao" class="inline-block bg-base hover:bg-opacity-90 text-white font-semibold py-3 px-8 rounded-lg shadow-lg transition-all animate-fade-in delay-200 transform hover:scale-105" style="margin-bottom: 30px;">
+                Quero participar de células
+            </a>
+            <p>O carisma ou missão da Comunidade Caminho do Discipulo é um processo orientado pelo caminho discipular de Jesus, apresentado no Evangelho de Marcos 3,13-15. <br><br>
+
+            “Jesus subiu um monte chamou os que Ele quis e foram para perto Dele”. <br> (versículo. 13)</p>
+        </div>
+    </section>
+
+    <!-- Sobre Section -->
+    <section id="sobre" class="py-20 bg-gray-50 dark:bg-gray-800">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 style="font-size: 2em;" class="text-3xl md:text-4xl font-bold mb-6 text-base">Sobre o Caminho do Discípulo</h2>
+                <p class="text-lg leading-relaxed mb-8">
+                    O <strong>Caminho do Discípulo</strong> é um projeto que visa conduzir pessoas a uma experiência 
+                    autêntica e profunda com Jesus Cristo. Através de um roteiro estruturado e acompanhamento 
+                    comunitário, ajudamos os participantes a descobrirem seu propósito, desenvolverem 
+                    seus dons e viverem uma fé transformadora.
+                </p>
+                <p class="text-lg leading-relaxed">
+                    Nosso projeto é fundamentado em quatro pilares essenciais que constituem o itinerário 
+                    completo de um discípulo de Cristo: <span class="font-semibold text-conversao">Conversão</span>, 
+                    <span class="font-semibold text-comunhao">Comunhão</span>, 
+                    <span class="font-semibold text-formacao">Formação</span> e 
+                    <span class="font-semibold text-missao">Missão</span>.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pilares Section -->
+    <section id="pilares" class="py-20">
+        <div class="container mx-auto px-4">
+            <h2 style="font-size: 2.5em;" class="text-3xl md:text-4xl font-bold mb-12 text-center text-base">Nossos Pilares</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Conversão -->
+                <div class="rounded-lg overflow-hidden shadow-lg transition-all duration-300 card-hover animate-fade-in">
+                    <div class="h-2 bg-conversao"></div>
+                    <div class="p-6 bg-white dark:bg-gray-800 dark:border-gray-700">
+                        <div class="w-16 h-16 rounded-full bg-conversao bg-opacity-20 flex items-center justify-center mx-auto mb-6">
+                            <i class="fas fa-heart text-conversao text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4 text-center text-conversao">Conversão</h3>
+                        <p class="text-gray-600 dark:text-gray-300">
+                            O caminho começa com o encontro pessoal com Cristo. Experimentamos a graça transformadora 
+                            do amor de Deus que nos leva a uma conversão genuína e uma nova vida. 
+                            Nessa etapa, o participante é conduzido a reconhecer seu chamado específico.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Comunhão -->
+                <div class="rounded-lg overflow-hidden shadow-lg transition-all duration-300 card-hover animate-fade-in delay-100">
+                    <div class="h-2 bg-comunhao"></div>
+                    <div class="p-6 bg-white dark:bg-gray-800 dark:border-gray-700">
+                        <div class="w-16 h-16 rounded-full bg-comunhao bg-opacity-20 flex items-center justify-center mx-auto mb-6">
+                            <i class="fas fa-users text-comunhao text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4 text-center text-comunhao">Comunhão</h3>
+                        <p class="text-gray-600 dark:text-gray-300">
+                            A fé se desenvolve em comunidade. Vivemos a fraternidade e a partilha em pequenos 
+                            grupos, construindo relações autênticas e solidárias. Nesse ambiente, 
+                            crescemos juntos na jornada espiritual e nos apoiamos mutuamente.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Formação -->
+                <div class="rounded-lg overflow-hidden shadow-lg transition-all duration-300 card-hover animate-fade-in delay-200">
+                    <div class="h-2 bg-formacao"></div>
+                    <div class="p-6 bg-white dark:bg-gray-800 dark:border-gray-700">
+                        <div class="w-16 h-16 rounded-full bg-formacao bg-opacity-20 flex items-center justify-center mx-auto mb-6">
+                            <i class="fas fa-book-open text-formacao text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4 text-center text-formacao">Formação</h3>
+                        <p class="text-gray-600 dark:text-gray-300">
+                            O discípulo precisa conhecer sua fé. Oferecemos uma formação sólida nas Escrituras, 
+                            na doutrina católica e na espiritualidade cristã. Através de estudos, 
+                            reflexões e partilhas, amadurecemos na compreensão e vivência da fé.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Missão -->
+                <div class="rounded-lg overflow-hidden shadow-lg transition-all duration-300 card-hover animate-fade-in delay-300">
+                    <div class="h-2 bg-missao"></div>
+                    <div class="p-6 bg-white dark:bg-gray-800 dark:border-gray-700">
+                        <div class="w-16 h-16 rounded-full bg-missao bg-opacity-20 flex items-center justify-center mx-auto mb-6">
+                            <i class="fas fa-globe-americas text-missao text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4 text-center text-missao">Missão</h3>
+                        <p class="text-gray-600 dark:text-gray-300">
+                            Todo discípulo é também missionário. Somos chamados a testemunhar Cristo no mundo, 
+                            através de nossas palavras e ações. Promovemos projetos sociais, evangelização 
+                            e iniciativas que levam ao encontro com Deus e o serviço ao próximo.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vídeo Introdutório Section -->
+    <section class="py-20 bg-gray-50 dark:bg-gray-800">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 style="font-size: 2em;" class="text-3xl md:text-4xl font-bold mb-8 text-base">Bem vindo a célula!</h2>
+                <div class="relative pb-[56.25%] h-0 rounded-lg overflow-hidden shadow-xl">
+                    <!-- Espaço reservado para vídeo do YouTube - substituir o src pelo vídeo real -->
+                    <iframe width="900" height="510" src="https://www.youtube.com/embed/VOFZP5VunpM?si=7MChqVg2S1aTa0Lk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <p class="mt-6 text-lg">
+                    Assista ao vídeo para entender melhor nossa proposta e como o Caminho do Discípulo pode 
+                    transformar sua vida de fé.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formulário de Inscrição -->
+    <section id="inscricao" class="py-20">
+        <div class="container mx-auto px-4">
+            <div class="max-w-2xl mx-auto bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden">
+                <div class="bg-base text-white p-6 text-center">
+                    <h2 class="text-2xl md:text-3xl font-bold">Faça Parte da Família CCD</h2>
+                    <p class="mt-2">Preencha o formulário abaixo para se inscrever</p>
+                </div>
+                
+                <div class="p-6 md:p-8">
+                    <form id="inscricao-form" class="space-y-4">
+                        <div>
+                            <label for="nome" class="block mb-2 font-medium">Nome completo</label>
+                            <input type="text" id="nome" class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-base focus:border-base dark:bg-gray-700 dark:text-white text-base" required>
+                        </div>
+                        
+                        <div>
+                            <label for="email" class="block mb-2 font-medium">E-mail</label>
+                            <input type="email" id="email" class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-base focus:border-base dark:bg-gray-700 dark:text-white text-base" required>
+                        </div>
+                        
+                        <div>
+                            <label for="cidade" class="block mb-2 font-medium">Cidade</label>
+                            <input type="text" id="cidade" class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-base focus:border-base dark:bg-gray-700 dark:text-white text-base" required>
+                        </div>
+                        
+                        <div id="sucesso" class="hidden p-4 bg-green-100 text-green-800 rounded-lg">
+                            <p>Sua inscrição foi recebida com sucesso! Entraremos em contato em breve.</p>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-base hover:bg-opacity-90 text-white font-semibold py-3 px-6 rounded-lg shadow transition-all transform hover:scale-105">
+                            Quero participar
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WhatsApp Group Section -->
+    <section class="py-16 bg-gray-50 dark:bg-gray-800">
+        <div class="container mx-auto px-4 text-center">
+            <h2 style="font-size: 2em;" class="text-2xl md:text-3xl font-bold mb-6 text-base">Entre no Nosso Grupo</h2>
+            <p class="text-lg mb-8 max-w-2xl mx-auto">
+                Participe do nosso grupo no WhatsApp para receber informações, 
+                materiais e interagir com outros participantes do Caminho do Discípulo.
+            </p>
+            <a href="https://chat.whatsapp.com/example" target="_blank" class="inline-flex items-center bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-8 rounded-lg shadow-lg transition-all transform hover:scale-105">
+                <i class="fab fa-whatsapp text-2xl mr-3"></i>
+                Entrar no Grupo
+            </a>
+        </div>
+    </section>
+
+    <!-- Testemunhos Section -->
+    <section class="py-20">
+        <div class="container mx-auto px-4">
+            <h2 style="font-size: 2em;" class="text-3xl md:text-4xl font-bold mb-12 text-center text-base">Testemunhos</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testemunho 1 -->
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-gray-200 dark:bg-gray-700 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-user text-gray-500 dark:text-gray-400"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Maria Silva</h4>
+                            <p class="text-sm text-gray-500 dark:text-gray-400">São José dos Campos, SP</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-300 italic">
+                        "O Caminho do Discípulo transformou completamente minha vida de fé. Aprendi a viver 
+                        na presença de Deus e encontrei uma comunidade que me acolheu como família."
+                    </p>
+                </div>
+                
+                <!-- Testemunho 2 -->
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-gray-200 dark:bg-gray-700 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-user text-gray-500 dark:text-gray-400"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Carlos Oliveira</h4>
+                            <p class="text-sm text-gray-500 dark:text-gray-400">Paraíbuna, SP</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-300 italic">
+                        "Antes da célula, eu tinha uma fé superficial. Hoje, entendo a profundidade do chamado de Cristo e como posso colocar meus dons a serviço da evangelização."
+                    </p>
+                </div>
+                
+                <!-- Testemunho 3 -->
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-gray-200 dark:bg-gray-700 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-user text-gray-500 dark:text-gray-400"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Ana Beatriz</h4>
+                            <p class="text-sm text-gray-500 dark:text-gray-400">Monteiro Lobato, SP</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-300 italic">
+                        "A formação que recebi me deu segurança para falar sobre minha fé e testemunhar Cristo. 
+                        Hoje faço parte de uma célula e ajudo outros a encontrarem seu propósito."
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contato" class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Logo e descrição -->
+                <div class="md:col-span-2">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <i class="fas fa-cross mr-2"></i>
+                        <span>Caminho do Discípulo</span>
+                    </h3>
+                    <p class="mb-4 text-gray-400">
+                        Vivendo a fé com propósito através da conversão, comunhão, formação e missão.
+                    </p>
+                    <div class="flex space-x-4 mt-4">
+                        <a href="https://www.facebook.com/camdodiscipulo/?locale=pt_BR" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-facebook-f text-xl"></i>
+                        </a>
+                        <a href="https://www.instagram.com/caminhododiscipulo/reels/" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                        <a href="https://www.youtube.com/c/CaminhoDoDisc%C3%ADpulo" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-youtube text-xl"></i>
+                        </a>
+                        <a href="https://web.whatsapp.com/" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-whatsapp text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Links rápidos -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Links Rápidos</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-white transition-colors">Início</a></li>
+                        <li><a href="#sobre" class="text-gray-400 hover:text-white transition-colors">Sobre</a></li>
+                        <li><a href="#pilares" class="text-gray-400 hover:text-white transition-colors">Pilares</a></li>
+                        <li><a href="#inscricao" class="text-gray-400 hover:text-white transition-colors">Inscrição</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contato -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contato</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-2 text-gray-400"></i>
+                            <a href="mailto:contato@caminhodiscipulo.org" class="text-gray-400 hover:text-white transition-colors">contato@caminhodiscipulo.org</a>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone mr-2 text-gray-400"></i>
+                            <a href="tel:+5511999999999" class="text-gray-400 hover:text-white transition-colors">(11) 99999-9999</a>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-map-marker-alt mr-2 text-gray-400"></i>
+                            <span class="text-gray-400">São José dos Campos, SP - Brasil</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-300">
+                <p>&copy; Desde 2006 Caminho do Discípulo. Criado por <a href="https://github.com/Kleber-sjc"class="link-destaque">Kleber Mendonça.</a></p>
+            </div>
+        </div>
+    </footer>
+    <audio id="background-audio" loop>
+        <source src="audio/hope-is-still-alive-237162.mp3" type="audio/mpeg">
+        Seu navegador não suporta o elemento de áudio.
+    </audio>
+
+    <script>
+        // Código para controle do áudio
+        document.addEventListener('DOMContentLoaded', function() {
+            const backgroundAudio = document.getElementById('background-audio');
+            if (backgroundAudio) {
+                backgroundAudio.volume = 0.3; // Ajusta o volume para 30%
+                backgroundAudio.play().catch(error => {
+                    console.log("Erro ao tentar tocar o áudio:", error);
+                });
+            }
+        });
+    </script>
+</body>
+</html>

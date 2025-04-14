@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+.bg-overlay {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.card-hover:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(93, 26, 26, 0);
+}
+
+.dark .card-hover:hover {
+    box-shadow: 0 10px 20px rgba(179, 128, 128, 0.05);
+}
+
+/* Animação de fade-in para os elementos */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.8s ease forwards;
+}
+
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+.delay-400 { animation-delay: 0.4s; }
+
+.dark {
+    --tw-bg-opacity: 1;
+    background-color: rgba(24, 24, 24, var(--tw-bg-opacity));
+    color: white;
+}
+
+.dark .dark\:bg-gray-900 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(17, 24, 39, var(--tw-bg-opacity));
+}
+
+.dark .dark\:text-white {
+    --tw-text-opacity: 1;
+    color: rgba(255, 255, 255, var(--tw-text-opacity));
+}
+
+.dark .dark\:border-gray-700 {
+    --tw-border-opacity: 1;
+    border-color: rgba(55, 65, 81, var(--tw-border-opacity));
+}
+
+section#div h2{
+    font-size: 3,5em;
+}
+
+.link-destaque {
+    color: rgba(193, 193, 193, 0.759); /* Cor padrão */
+    transition: color 0.3s; /* Efeito suave na transição da cor */
+}
+
+.link-destaque:hover {
+    color: white; /* Cor ao passar o mouse */
+    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+}
